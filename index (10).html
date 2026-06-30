@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Youssuf Walid — Creative Director & Founder of Halal Reels</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Youssuf Walid — Creative Director, Social Media Strategist & Founder of Halal Reels. Helping brands, entrepreneurs & creators grow through AI-powered content systems. Based in Cairo, Egypt."/>
+<meta name="keywords" content="Youssuf Walid, Creative Director, Social Media Marketing, Halal Reels, Content Strategy, AI Marketing, Cairo Egypt, Freelancer Coaching"/>
+<meta name="author" content="Youssuf Walid"/>
+<meta name="robots" content="index, follow"/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://youssufwalid.netlify.app/"/>
+<meta property="og:title" content="Youssuf Walid — Creative Director & Founder of Halal Reels"/>
+<meta property="og:description" content="Helping brands, entrepreneurs & creators grow through strategic content, AI-powered systems, and sharp creative direction."/>
+<meta property="og:image" content="https://res.cloudinary.com/djcuicylw/image/upload/v1782516268/youssuf_og.jpg"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Youssuf Walid — Creative Director & Founder of Halal Reels"/>
+<meta name="twitter:description" content="Helping brands, entrepreneurs & creators grow through strategic content, AI-powered systems, and sharp creative direction."/>
+<meta name="twitter:image" content="https://res.cloudinary.com/djcuicylw/image/upload/v1782516268/youssuf_og.jpg"/>
+
+<!-- Canonical -->
+<link rel="canonical" href="https://youssufwalid.netlify.app/"/>
+<link rel="alternate" hreflang="en" href="https://youssufwalid.netlify.app/"/>
+<link rel="alternate" hreflang="ar" href="https://youssufwalid.netlify.app/"/>
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://res.cloudinary.com"/>
+
+<!-- Google Fonts with font-display swap -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=Cairo:wght@400;600;700&display=swap&font-display=swap" rel="stylesheet"/>
+<style>
+/* Font display optimization */
+@font-face{font-display:swap}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0D0D0D;
+  --surface:#141414;
+  --surface2:#1C1C1C;
+  --accent:#00C2FF;
+  --accent2:#0066FF;
+  --text:#F0EDE8;
+  --muted:#888580;
+  --border:rgba(255,255,255,0.07);
+}
+html,body{height:100%;overflow:hidden}
+body{background:var(--bg);color:var(--text);font-family:"Inter",sans-serif;line-height:1.6}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);background:rgba(13,13,13,0.95);backdrop-filter:blur(16px)}
+.nav-logo{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-.02em;cursor:pointer}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:0;list-style:none}
+.nav-links li a{color:var(--muted);text-decoration:none;font-size:.83rem;font-weight:500;padding:.5rem 1.1rem;border-radius:6px;transition:color .3s,background .3s;display:block;cursor:pointer}
+.nav-links li a:hover{color:var(--text);background:rgba(255,255,255,.05)}
+.nav-links li a.active{color:var(--text);background:rgba(0,194,255,.1)}
+.nav-right{display:flex;align-items:center;gap:.75rem}
+.lang-toggle{display:flex;gap:3px;background:var(--surface2);border-radius:6px;padding:3px}
+.lang-btn{background:transparent;border:none;color:var(--muted);padding:.25rem .6rem;border-radius:4px;cursor:pointer;font-size:.78rem;font-family:"Inter",sans-serif;transition:all .3s}
+.lang-btn.active{background:linear-gradient(90deg,#00C2FF,#0066FF);color:#fff}
+.nav-cta{background:linear-gradient(90deg,#00C2FF,#0066FF);color:#fff;padding:.45rem 1.1rem;border-radius:6px;text-decoration:none;font-size:.83rem;font-weight:500;cursor:pointer;border:none;transition:opacity .3s}
+.nav-cta:hover{opacity:.85}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.25rem;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-menu{display:none;position:fixed;top:57px;left:0;right:0;background:rgba(13,13,13,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:1.25rem 1.5rem;z-index:199;flex-direction:column;gap:.5rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--muted);text-decoration:none;font-size:1rem;font-weight:500;padding:.65rem 0;border-bottom:1px solid var(--border);cursor:pointer;transition:color .3s}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a.active,.mobile-menu a:hover{color:var(--accent)}
+
+/* PAGE SYSTEM */
+.page{position:fixed;top:57px;left:0;right:0;bottom:0;overflow-y:auto;opacity:0;pointer-events:none;transform:translateY(20px);transition:opacity .35s ease,transform .35s ease;-webkit-overflow-scrolling:touch}
+.page.active{opacity:1;pointer-events:all;transform:translateY(0)}
+
+/* PAGE CONTENT WRAPPER */
+.page-inner{min-height:100%;padding:4rem 2.5rem 5rem}
+
+/* ============ HOME PAGE ============ */
+#page-home{background:var(--bg)}
+.home-hero{min-height:calc(100vh - 57px);display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:center;padding:3rem 0}
+.hero-bg-text{position:fixed;bottom:-2rem;left:-1rem;font-family:"Space Grotesk",sans-serif;font-size:22vw;font-weight:700;color:rgba(0,194,255,.025);pointer-events:none;user-select:none;line-height:1;z-index:0}
+.hero-bg-orb{position:fixed;top:15%;right:25%;width:400px;height:400px;background:radial-gradient(circle,rgba(0,194,255,.07) 0%,transparent 70%);pointer-events:none;z-index:0}
+.hero-left{position:relative;z-index:1}
+.hero-eyebrow{font-size:.72rem;letter-spacing:.15em;color:var(--accent);text-transform:uppercase;margin-bottom:1.25rem;font-weight:500;display:flex;align-items:center;gap:.6rem}
+.hero-eyebrow::before{content:"";display:inline-block;width:24px;height:1px;background:linear-gradient(90deg,#00C2FF,#0066FF)}
+.hero-name{font-family:"Space Grotesk",sans-serif;font-size:clamp(2.6rem,6vw,5.5rem);font-weight:700;line-height:1;letter-spacing:-.04em;margin-bottom:.85rem}
+.hero-name-text{background:linear-gradient(90deg,#F0EDE8 60%,#00C2FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-block}
+.cursor{display:inline-block;width:4px;height:.8em;background:#00C2FF;margin-left:3px;vertical-align:middle;animation:blink .9s step-end infinite;-webkit-text-fill-color:#00C2FF}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-role{font-size:clamp(.9rem,1.8vw,1.1rem);color:var(--muted);margin-bottom:1.25rem}
+.hero-role strong{color:var(--text)}
+.hero-bio{max-width:500px;color:var(--muted);font-size:.9rem;line-height:1.9;margin-bottom:2.25rem}
+.hero-actions{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:2.75rem}
+.btn-primary{background:linear-gradient(90deg,#00C2FF,#0066FF);color:#fff;padding:.65rem 1.6rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:.875rem;transition:transform .15s,opacity .15s;display:inline-flex;align-items:center;gap:.4rem;border:none;cursor:pointer}
+.btn-primary:hover{opacity:.9;transform:translateY(-1px)}
+.btn-secondary{border:1px solid var(--border);color:var(--text);padding:.65rem 1.6rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:.875rem;transition:background .15s,border-color .2s;display:inline-flex;align-items:center;gap:.4rem;background:transparent;cursor:pointer}
+.btn-secondary:hover{background:var(--surface);border-color:rgba(255,255,255,.15)}
+.hero-stats{display:flex;gap:2rem}
+.hstat{border-left:2px solid rgba(0,194,255,.25);padding-left:1rem}
+.hstat-num{font-family:"Space Grotesk",sans-serif;font-size:1.9rem;font-weight:700;line-height:1}
+.hstat-label{font-size:.7rem;color:var(--muted);letter-spacing:.05em;margin-top:.2rem}
+
+/* PROFILE CARD */
+.profile-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:1.75rem;text-align:center;position:relative;overflow:hidden;flex-shrink:0;z-index:1}
+.profile-card::before{content:"";position:absolute;top:0;left:0;right:0;height:80px;background:linear-gradient(135deg,rgba(0,194,255,.12),rgba(0,102,255,.04));pointer-events:none}
+.profile-card::after{content:"";position:absolute;top:-1px;left:20%;right:20%;height:2px;background:linear-gradient(90deg,transparent,#00C2FF,transparent)}
+.profile-avatar{width:90px;height:90px;border-radius:50%;border:2.5px solid rgba(0,194,255,.5);margin:0 auto 1rem;overflow:hidden;position:relative;z-index:1}
+.profile-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.profile-name{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1rem;margin-bottom:.2rem}
+.profile-handle{font-size:.78rem;background:linear-gradient(90deg,#00C2FF,#0066FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.25rem;letter-spacing:.02em}
+.profile-stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;margin-bottom:1.25rem;padding:.75rem;background:var(--surface2);border-radius:10px}
+.pstat-num{font-family:"Space Grotesk",sans-serif;font-size:1rem;font-weight:700;line-height:1}
+.pstat-label{font-size:.6rem;color:var(--muted);letter-spacing:.04em;margin-top:.15rem}
+.profile-badges{display:flex;flex-direction:column;gap:.4rem}
+.profile-badge{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:.4rem .75rem;font-size:.72rem;display:flex;align-items:center;gap:.5rem;color:var(--muted);text-align:left}
+.profile-badge span{color:var(--text);font-weight:500}
+
+/* ============ ABOUT PAGE ============ */
+#page-about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:2rem}
+.about-text{color:var(--muted);line-height:1.9;font-size:.925rem}
+.about-text p{margin-bottom:.85rem}
+.highlight{color:var(--text);font-weight:500}
+.about-tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.5rem}
+.tag{background:var(--surface2);border:1px solid var(--border);padding:.28rem .75rem;border-radius:20px;font-size:.75rem;color:var(--text)}
+.quote-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.6rem;margin-bottom:1rem;border-left:3px solid #00C2FF;position:relative}
+.quote-card::before{content:'"';position:absolute;top:-.5rem;left:1rem;font-size:3rem;color:rgba(0,194,255,.2);font-family:Georgia,serif;line-height:1}
+.quote-text{font-family:"Space Grotesk",sans-serif;font-size:.95rem;color:var(--text);line-height:1.65;padding-top:.5rem}
+.quote-attr{font-size:.72rem;color:var(--muted);margin-top:.6rem}
+.who-label{font-size:.7rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin:1.5rem 0 .85rem}
+.who-item{display:flex;gap:.75rem;margin-bottom:.85rem;padding:1rem 1.1rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;transition:border-color .3s}
+.who-item:hover{border-color:rgba(0,194,255,.25)}
+.who-icon{font-size:1.1rem;flex-shrink:0;margin-top:.1rem}
+.who-head{font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:.2rem}
+.who-desc{font-size:.78rem;color:var(--muted);line-height:1.65}
+
+/* ============ SERVICES PAGE ============ */
+#page-services{background:var(--surface)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.5rem}
+.service-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:border-color .3s,transform .3s;position:relative;overflow:hidden}
+.service-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:transparent;transition:background .3s}
+.service-card:hover{border-color:rgba(0,194,255,.35);transform:translateY(-2px)}
+.service-card:hover::before{background:linear-gradient(90deg,#00C2FF,#0066FF,transparent)}
+.service-icon{width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:1rem}
+.service-name{font-family:"Space Grotesk",sans-serif;font-size:.95rem;font-weight:700;margin-bottom:.4rem}
+.service-desc{font-size:.8rem;color:var(--muted);line-height:1.7}
+
+/* ============ PILLARS PAGE ============ */
+#page-pillars{background:var(--bg)}
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;margin-top:2.5rem}
+.pillar-card{transition:transform .3s}
+.pillar-card:hover{transform:translateY(-4px)}
+.pillar-img{aspect-ratio:4/3;border-radius:12px;overflow:hidden;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;position:relative}
+.pillar-img-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.pillar-emoji{font-size:4rem;position:relative;z-index:1}
+.pillar-overlay{position:absolute;inset:0}
+.pillar-label{font-size:.7rem;letter-spacing:.14em;color:#00C2FF;text-transform:uppercase;font-weight:500;margin-bottom:.6rem}
+.pillar-title{font-family:"Space Grotesk",sans-serif;font-size:2rem;font-weight:700;color:#F0EDE8;margin-bottom:1rem;letter-spacing:-.03em}
+.pillar-desc{color:#888580;font-size:.9rem;line-height:1.85}
+
+/* ============ WORK PAGE ============ */
+#page-work{background:var(--bg)}
+.clients-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin-top:2.5rem}
+.client-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.35rem;text-align:center;transition:border-color .3s,transform .3s}
+.client-card:hover{border-color:rgba(0,194,255,.3);transform:translateY(-2px)}
+.client-icon{font-size:1.4rem;margin-bottom:.55rem}
+.client-name{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.25rem}
+.client-sector{font-size:.7rem;color:var(--muted)}
+.content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.5rem}
+.content-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:transform .3s,border-color .2s;cursor:pointer}
+.content-card:hover{transform:translateY(-3px);border-color:rgba(0,194,255,.3)}
+.content-thumb{aspect-ratio:4/5;background:var(--surface2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:1.25rem}
+.content-arabic{font-family:"Cairo",sans-serif;font-size:1rem;font-weight:700;color:var(--text);line-height:1.5;direction:rtl;text-align:center;position:relative;z-index:1}
+.content-grd{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,194,255,.08),transparent)}
+.content-bar{position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#00C2FF,#0066FF)}
+.content-meta{padding:.7rem 1rem}
+.content-type{font-size:.75rem;font-weight:600;color:var(--text);margin-bottom:.15rem}
+.content-sub{font-size:.7rem;color:var(--muted)}
+.os-banner{margin-top:2rem;background:linear-gradient(135deg,rgba(0,194,255,.08),rgba(0,102,255,.03));border:1px solid rgba(0,194,255,.2);border-radius:14px;padding:1.6rem 2rem;display:flex;align-items:flex-start;gap:1.25rem}
+.os-icon{font-size:1.75rem;flex-shrink:0;margin-top:.15rem}
+.os-title{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1rem;margin-bottom:.4rem;background:linear-gradient(90deg,#00C2FF,#0066FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.os-desc{font-size:.85rem;color:var(--muted);line-height:1.8}
+
+/* ============ CONTACT PAGE ============ */
+#page-contact{background:var(--bg);display:flex;align-items:center;justify-content:center}
+.contact-inner{text-align:center;max-width:600px;margin:0 auto}
+.contact-grid{display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;margin-top:2.5rem}
+.contact-link{display:flex;align-items:center;gap:.6rem;background:var(--surface);border:1px solid var(--border);padding:.8rem 1.6rem;border-radius:12px;text-decoration:none;color:var(--text);font-size:.875rem;font-weight:500;transition:border-color .3s,transform .15s;cursor:pointer}
+.contact-link:hover{border-color:rgba(0,194,255,.5);transform:translateY(-2px)}
+.contact-sub{color:var(--muted);margin-top:.65rem;margin-bottom:0;font-size:.95rem}
+
+/* SECTION LABELS */
+.section-label{font-size:.7rem;letter-spacing:.16em;color:#00C2FF;text-transform:uppercase;font-weight:500;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.section-label::before{content:"";display:inline-block;width:16px;height:1px;background:linear-gradient(90deg,#00C2FF,#0066FF)}
+.section-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:1rem}
+
+/* FOOTER inside pages */
+.page-footer{padding:2rem 0 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:3rem}
+.footer-copy{font-size:.75rem;color:var(--muted)}
+.footer-brand{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:.95rem}
+.footer-brand span{color:var(--accent)}
+
+/* ARABIC RTL */
+[dir=rtl] .hero-eyebrow::before,[dir=rtl] .section-label::before{display:none}
+[dir=rtl] .quote-card{border-left:none;border-right:3px solid #00C2FF}
+[dir=rtl] .hstat{border-left:none;border-right:2px solid rgba(0,194,255,.25);padding-left:0;padding-right:1rem}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .pillars-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:900px){
+  .home-hero{grid-template-columns:1fr}
+  .profile-card{max-width:100%;width:100%}
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .pillars-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  nav{padding:1rem 1.25rem}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .page-inner{padding:2.5rem 1.25rem 4rem}
+  .hero-stats{gap:1.25rem;flex-wrap:wrap}
+  .services-grid{grid-template-columns:1fr;gap:.85rem}
+  .content-grid{grid-template-columns:repeat(2,1fr)}
+  .clients-grid{grid-template-columns:repeat(2,1fr)}
+  .home-hero{padding:1.5rem 0}
+}
+@media(max-width:400px){
+  .hero-name{font-size:2.2rem}
+  .hero-actions{flex-direction:column}
+  .btn-primary,.btn-secondary{width:100%;justify-content:center}
+  .contact-grid{flex-direction:column;align-items:stretch}
+  .contact-link{justify-content:center}
+  .content-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">YW<span>.</span></div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')" data-page="home" class="active en">Home</a><a onclick="showPage('home')" data-page="home" class="ar" style="display:none;font-family:Cairo,sans-serif">الرئيسية</a></li>
+    <li><a onclick="showPage('about')" data-page="about" class="en">About</a><a onclick="showPage('about')" data-page="about" class="ar" style="display:none;font-family:Cairo,sans-serif">عني</a></li>
+    <li><a onclick="showPage('services')" data-page="services" class="en">Services</a><a onclick="showPage('services')" data-page="services" class="ar" style="display:none;font-family:Cairo,sans-serif">الخدمات</a></li>
+    <li><a onclick="showPage('pillars')" data-page="pillars" class="en">Approach</a><a onclick="showPage('pillars')" data-page="pillars" class="ar" style="display:none;font-family:Cairo,sans-serif">المنهج</a></li>
+    <li><a onclick="showPage('work')" data-page="work" class="en">Work</a><a onclick="showPage('work')" data-page="work" class="ar" style="display:none;font-family:Cairo,sans-serif">الشغل</a></li>
+    <li><a onclick="showPage('coaching')" data-page="coaching" class="en">Coaching</a><a onclick="showPage('coaching')" data-page="coaching" class="ar" style="display:none;font-family:Cairo,sans-serif">الكوتشنج</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+      <button class="lang-btn" onclick="setLang('ar')" id="btn-ar">ع</button>
+    </div>
+    <button class="nav-cta en" onclick="showPage('contact')">Let's Talk</button>
+    <button class="nav-cta ar" style="display:none;font-family:Cairo,sans-serif" onclick="showPage('contact')">تواصل</button>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a onclick="showPage('home');closeMenu()" class="en active">Home</a>
+  <a onclick="showPage('about');closeMenu()" class="en">About</a>
+  <a onclick="showPage('services');closeMenu()" class="en">Services</a>
+  <a onclick="showPage('pillars');closeMenu()" class="en">Approach</a>
+  <a onclick="showPage('work');closeMenu()" class="en">Work</a>
+  <a onclick="showPage('coaching');closeMenu()" class="en">Coaching</a>
+  <a onclick="showPage('contact');closeMenu()" class="en">Contact</a>
+</div>
+
+<!-- ==================== HOME ==================== -->
+<div class="page active" id="page-home">
+  <div class="page-inner" style="position:relative;padding:0">
+    <!-- VIDEO BACKGROUND -->
+    <div style="position:fixed;top:57px;left:0;right:0;bottom:0;z-index:0;overflow:hidden;pointer-events:none">
+      <video autoplay muted loop playsinline preload="metadata"
+        style="width:100%;height:100%;object-fit:cover;opacity:.35"
+        src="https://res.cloudinary.com/djcuicylw/video/upload/v1782516268/0305_anthph.mov">
+      </video>
+      <!-- Dark gradient overlay -->
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,13,13,.85) 0%,rgba(10,22,40,.75) 50%,rgba(13,13,13,.9) 100%)"></div>
+      <!-- Bottom fade -->
+      <div style="position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(transparent,var(--bg))"></div>
+    </div>
+    <!-- Blue orb on top of video -->
+    <div class="hero-bg-orb" style="position:fixed;z-index:1"></div>
+    <div style="position:relative;z-index:2;padding:3rem 2.5rem 4rem">
+    <div class="home-hero">
+      <div class="hero-left">
+        <p class="hero-eyebrow en">Creative Director · Cairo, Egypt</p>
+        <p class="hero-eyebrow ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">كريييتف دايركتور · القاهرة، مصر</p>
+        <h1 class="hero-name">
+          <span class="hero-name-text" id="typed-name"></span><span class="cursor"></span>
+        </h1>
+        <p class="hero-role en"><strong>Founder of Halal Reels</strong> — Social Media · Content · AI Automation</p>
+        <p class="hero-role ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">مؤسس <strong>Halal Reels</strong> — سوشيال ميديا · كونتنت · AI</p>
+        <p class="hero-bio en">I help brands, entrepreneurs & creators grow through strategic content, sharp creative direction, and AI-powered systems. Founder of <strong style="color:var(--text)">Genz 1% Podcast</strong>.</p>
+        <p class="hero-bio ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">بساعد البراندات والأنتربرينورز ينمو من خلال كونتنت استراتيجي وسيستمز AI. مؤسس بودكاست <strong style="color:var(--text)">Genz 1%</strong>.</p>
+        <div class="hero-actions">
+          <button class="btn-primary en" onclick="showPage('work')">↗ See My Work</button>
+          <button class="btn-primary ar" style="font-family:Cairo,sans-serif;display:none" onclick="showPage('work')">↗ شوف شغلي</button>
+          <button class="btn-secondary en" onclick="showPage('contact')">Get In Touch</button>
+          <button class="btn-secondary ar" style="font-family:Cairo,sans-serif;display:none" onclick="showPage('contact')">تواصل معايا</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat"><div class="hstat-num">7.3K</div><div class="hstat-label en">INSTAGRAM</div><div class="hstat-label ar" style="font-family:Cairo,sans-serif;display:none">انستجرام</div></div>
+          <div class="hstat"><div class="hstat-num">1.2K</div><div class="hstat-label en">LINKEDIN</div><div class="hstat-label ar" style="font-family:Cairo,sans-serif;display:none">لينكد إن</div></div>
+          <div class="hstat"><div class="hstat-num">582</div><div class="hstat-label en">POSTS</div><div class="hstat-label ar" style="font-family:Cairo,sans-serif;display:none">بوست</div></div>
+          <div class="hstat"><div class="hstat-num">8+</div><div class="hstat-label en">YRS EXP.</div><div class="hstat-label ar" style="font-family:Cairo,sans-serif;display:none">سنة خبرة</div></div>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="profile-avatar"><img src="https://res.cloudinary.com/djcuicylw/image/upload/w_200,h_200,c_fill,g_face,f_webp,q_80/v1782671526/F4237E0E-14BC-4378-A8EF-8DE9CABF49E1_weoew8.png" alt="Youssuf Walid"/></div>
+        <div class="profile-name">Youssuf Walid</div>
+        <div class="profile-handle">@youssufwalid</div>
+        <div class="profile-stats-row">
+          <div><div class="pstat-num">582</div><div class="pstat-label">POSTS</div></div>
+          <div><div class="pstat-num">7.3K</div><div class="pstat-label">FOLLOWERS</div></div>
+          <div><div class="pstat-num">500+</div><div class="pstat-label">LI CONN.</div></div>
+        </div>
+        <div class="profile-badges">
+          <a href="https://youtu.be/b6VUgrgjFss?si=H9D_KBbgofwv2jVX" target="_blank" class="profile-badge" style="text-decoration:none;border-color:rgba(0,194,255,.3);transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.6)'" onmouseout="this.style.borderColor='rgba(0,194,255,.3)'">🎙️ <span style="color:#00C2FF">Genz 1% Podcast ↗</span></a>
+          <div class="profile-badge">🤖 <span>AI & Automation</span></div>
+          <div class="profile-badge">🎓 <span>Marketing Instructor</span></div>
+          <div class="profile-badge">📍 <span>El Shorouk, Cairo</span></div>
+        </div>
+      </div>
+
+      <!-- FREE FILE BANNER -->
+      <a href="https://gamma.app/docs/-ra7440vglvmz17q?mode=doc" target="_blank"
+        style="display:flex;align-items:center;gap:1.25rem;background:linear-gradient(135deg,rgba(0,194,255,.1),rgba(0,102,255,.06));border:1px solid rgba(0,194,255,.3);border-radius:14px;padding:1.25rem 1.6rem;text-decoration:none;margin-top:2rem;transition:transform .3s,border-color .3s;position:relative;overflow:hidden"
+        onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='rgba(0,194,255,.6)'"
+        onmouseout="this.style.transform='translateY(0)';this.style.borderColor='rgba(0,194,255,.3)'">
+        <!-- glow -->
+        <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:radial-gradient(circle,rgba(0,194,255,.15),transparent 70%);pointer-events:none"></div>
+        <!-- icon -->
+        <div style="width:52px;height:52px;background:linear-gradient(135deg,#00C2FF,#0066FF);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0">🚀</div>
+        <!-- text -->
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem">
+            <span style="font-size:.65rem;letter-spacing:.12em;color:#00C2FF;text-transform:uppercase;font-weight:600" class="en">FREE DOWNLOAD</span>
+            <span style="font-size:.65rem;letter-spacing:.12em;color:#00C2FF;text-transform:uppercase;font-weight:600;font-family:Cairo,sans-serif;display:none" class="ar">تحميل مجاني</span>
+            <span style="background:linear-gradient(90deg,#00C2FF,#0066FF);color:#fff;font-size:.6rem;padding:.15rem .5rem;border-radius:20px;font-weight:700;letter-spacing:.05em">NEW</span>
+          </div>
+          <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;color:#F0EDE8;margin-bottom:.2rem;line-height:1.3" class="en">The Secret to Go Viral on All Social Media Platforms ↗</p>
+          <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.95rem;color:#F0EDE8;margin-bottom:.2rem;line-height:1.4;direction:rtl;display:none" class="ar">السر وراء الانتشار على كل منصات السوشيال ميديا ↗</p>
+          <p style="font-size:.78rem;color:#888580" class="en">Free guide — get it now, no signup needed</p>
+          <p style="font-size:.78rem;color:#888580;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">دليل مجاني — خده دلوقتي بدون تسجيل</p>
+        </div>
+        <!-- arrow -->
+        <div style="font-size:1.25rem;color:#00C2FF;flex-shrink:0">↗</div>
+      </a>
+
+    </div>
+    <div class="page-footer" style="position:relative;z-index:2">
+      <p class="footer-copy">© 2026 Youssuf Walid</p>
+      <p class="footer-brand">HALAL REELS<span>.</span></p>
+    </div>
+    </div><!-- close z-index wrapper -->
+  </div>
+</div>
+
+<!-- ==================== ABOUT ==================== -->
+<div class="page" id="page-about">
+  <div class="page-inner">
+    <p class="section-label en">About</p>
+    <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">عني</p>
+    <h2 class="section-title en">Creative Director.<br/>Educator. Builder.</h2>
+    <h2 class="section-title ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">كريييتف دايركتور.<br/>مُعلّم. بيلدر.</h2>
+    <div class="about-grid">
+      <div>
+        <div class="about-text">
+          <p class="en">I'm <span class="highlight">Youssuf Walid</span> — Creative Director, Social Media Strategist, and Marketing Instructor running <span class="highlight">Halal Reels</span> from El Shorouk City, Cairo.</p>
+          <p class="ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">أنا <span class="highlight">يوسف وليد</span> — كريييتف دايركتور، سوشيال ميديا استراتيجيست، ومارككتنج إنستركتور، صاحب <span class="highlight">Halal Reels</span> من مدينة الشروق.</p>
+          <p class="en">With 8+ years of hands-on experience, I work with startups, established brands, and solo entrepreneurs — helping them use AI in a way that keeps things human while delivering real results.</p>
+          <p class="ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">بأكتر من 8 سنين خبرة، بشتغل مع الستارت أبز والبراندات والأنتربرينورز — بساعدهم يستخدموا الـ AI بشكل إنساني بيديّ نتايج حقيقية.</p>
+          <p class="en">As a Gen Z creator at the intersection of content, AI, personal branding, and business — I believe the future belongs to those who lead with authenticity.</p>
+          <p class="ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">كـ Gen Z كريييتور — أؤمن إن المستقبل لمن يقود بأصالة.</p>
+        </div>
+        <div class="about-tags">
+          <span class="tag">Content Strategy</span><span class="tag">AI Integration</span><span class="tag">Social Media</span><span class="tag">Graphic Design</span><span class="tag">Video Editing</span><span class="tag">Personal Branding</span><span class="tag">Reels System</span><span class="tag">Podcast Production</span>
+        </div>
+      </div>
+      <div>
+        <div class="quote-card"><div class="quote-text">"Good artists copy, great artists steal."</div><div class="quote-attr">Youssuf's guiding principle</div></div>
+        <div class="quote-card"><div class="quote-text" style="font-size:.88rem">"Work to learn, not to earn — then teach what you know."</div><div class="quote-attr">Inspired by Rich Dad Poor Dad</div></div>
+        <p class="who-label en">Who I work with</p>
+        <p class="who-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">بيشتغل مع مين</p>
+        <div class="who-item"><div class="who-icon">🏢</div><div><div class="who-head en">Companies</div><div class="who-head ar" style="font-family:Cairo,sans-serif;display:none">الشركات</div><div class="who-desc en">AI tools to scale operations and turn leaders into industry voices.</div><div class="who-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">أدوات AI لتوسيع العمليات وتحويل القيادات لأصوات مؤثرة.</div></div></div>
+        <div class="who-item"><div class="who-icon">🚀</div><div><div class="who-head en">Entrepreneurs & Creators</div><div class="who-head ar" style="font-family:Cairo,sans-serif;display:none">الأنتربرينورز</div><div class="who-desc en">Stand out and build personal brands that actually connect.</div><div class="who-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">يتميزوا ويبنوا براند شخصي بيوصل فعلاً.</div></div></div>
+        <div class="who-item"><div class="who-icon">🎓</div><div><div class="who-head en">Employees & Talent</div><div class="who-head ar" style="font-family:Cairo,sans-serif;display:none">الموظفون</div><div class="who-desc en">Use AI to position as thought leaders inside their companies.</div><div class="who-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">يستخدموا AI للتمركز كـ thought leaders من داخل الشركة.</div></div></div>
+      </div>
+    </div>
+    <div class="page-footer"><p class="footer-copy">© 2026 Youssuf Walid</p><p class="footer-brand">HALAL REELS<span>.</span></p></div>
+  </div>
+</div>
+
+<!-- ==================== SERVICES ==================== -->
+<div class="page" id="page-services">
+  <div class="page-inner">
+    <p class="section-label en">What Halal Reels Does</p>
+    <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">إيه اللي Halal Reels بتعمله</p>
+    <h2 class="section-title en">Services</h2>
+    <h2 class="section-title ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">الخدمات</h2>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">📱</div><p class="service-name en">Social Media Management</p><p class="service-name ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">إدارة السوشيال ميديا</p><p class="service-desc en">Full account management — strategy, calendar, copywriting, analytics, organic growth.</p><p class="service-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">إدارة كاملة — استراتيجية، كالندر، كوبيرايتنج، أناليتيكس، ونمو أورجانيك.</p></div>
+      <div class="service-card"><div class="service-icon">🎨</div><p class="service-name en">Creative Direction</p><p class="service-name ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">الكريييتف دايركشن</p><p class="service-desc en">Visual identity, brand consistency, and creative oversight across all touchpoints.</p><p class="service-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">هوية بصرية، ثبات البراند، وإشراف كريييتيف على كل نقاط التواصل.</p></div>
+      <div class="service-card"><div class="service-icon">🤖</div><p class="service-name en">AI & Automation</p><p class="service-name ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">AI والأتمتة</p><p class="service-desc en">Smart workflows that automate tasks and scale content without scaling costs.</p><p class="service-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">سيستمز ذكية بتأتمت المهام وتوسّع الكونتنت بدون زيادة التكاليف.</p></div>
+      <div class="service-card"><div class="service-icon">📊</div><p class="service-name en">Marketing Audits</p><p class="service-name ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">مراجعة التسويق</p><p class="service-desc en">Deep-dive audits: positioning, content gaps, competitive analysis, growth opportunities.</p><p class="service-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">مراجعة عميقة: بوزيشننج، جابز في الكونتنت، تحليل المنافسين.</p></div>
+      <div class="service-card"><div class="service-icon">🎓</div><p class="service-name en">Marketing Education</p><p class="service-name ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">التعليم التسويقي</p><p class="service-desc en">Workshops, courses, and 1-on-1 coaching on content, digital marketing, and AI tools.</p><p class="service-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">ورش، كورسات، وكوتشنج فردي في الكونتنت والديجيتال ماركتنج.</p></div>
+      <div class="service-card"><div class="service-icon">🎙️</div><p class="service-name en">Podcast & Video Production</p><p class="service-name ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">إنتاج بودكاست وفيديو</p><p class="service-desc en">End-to-end production — Reels, long-form video, podcast episodes, graphic design.</p><p class="service-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">إنتاج متكامل — ريلز، فيديو طويل، حلقات بودكاست، وجرافيك ديزاين.</p></div>
+    </div>
+    <div class="page-footer"><p class="footer-copy">© 2026 Youssuf Walid</p><p class="footer-brand">HALAL REELS<span>.</span></p></div>
+  </div>
+</div>
+
+<!-- ==================== PILLARS / APPROACH ==================== -->
+<div class="page" id="page-pillars">
+  <div class="page-inner">
+    <p class="section-label en">Our Approach</p>
+    <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">منهجنا</p>
+    <h2 class="section-title en">What We Build On</h2>
+    <h2 class="section-title ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">بنبني على إيه</h2>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-img" style="background:linear-gradient(135deg,#0A1628,#00274D)"><div class="pillar-overlay" style="background:linear-gradient(135deg,rgba(0,194,255,.15),rgba(0,102,255,.08))"></div><span class="pillar-emoji">🎨</span></div>
+        <p class="pillar-label en">BUILDING RELEVANCE</p><p class="pillar-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">بناء الصلة</p>
+        <h3 class="pillar-title en">Creative</h3><h3 class="pillar-title ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none;font-size:1.8rem">الكريييتف</h3>
+        <p class="pillar-desc en">I create content people actually want to watch and share. By listening to audiences — not just algorithms — I build ideas that drive real relevance. A single post done right can hit harder than a full campaign.</p>
+        <p class="pillar-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">بعمل كونتنت الناس عايزة تشوفه. بسمع للجمهور مش بس للخوارزميات — وبابني أفكار بتعمل صلة حقيقية. بوست واحد صح ممكن يأثر أكتر من كامبين كامل.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-img" style="background:linear-gradient(135deg,#0A1628,#001A3D)"><div class="pillar-overlay" style="background:linear-gradient(135deg,rgba(0,102,255,.15),rgba(0,194,255,.06))"></div><span class="pillar-emoji">🤖</span></div>
+        <p class="pillar-label en">AMPLIFIED REACH</p><p class="pillar-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">توسيع الوصول</p>
+        <h3 class="pillar-title en">AI Systems</h3><h3 class="pillar-title ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none;font-size:1.8rem">سيستمز AI</h3>
+        <p class="pillar-desc en">Relentlessly focused on results, not just potential reach. I build AI-powered workflows that understand where audiences actually spend their time — and turn that attention into real business outcomes at scale.</p>
+        <p class="pillar-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">مش بس وصول — نتايج حقيقية. بابني سيستمز AI بتفهم فين الجمهور فعلاً بيقضي وقته وبتحول الانتباه لنتايج بيزنس على نطاق واسع.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-img" style="background:linear-gradient(135deg,#050D1A,#0A1628)"><div class="pillar-overlay" style="background:linear-gradient(135deg,rgba(0,194,255,.1),rgba(0,66,255,.1))"></div><span class="pillar-emoji">📊</span></div>
+        <p class="pillar-label en">TARGETED IMPACT</p><p class="pillar-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">تأثير مركّز</p>
+        <h3 class="pillar-title en">Strategy</h3><h3 class="pillar-title ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none;font-size:1.8rem">الاستراتيجية</h3>
+        <p class="pillar-desc en">I put the human at the forefront of everything — ensuring ideas are culturally relevant and audience-led. The most effective growth comes from understanding people as individuals, not mass audiences.</p>
+        <p class="pillar-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">بحط الإنسان في مقدمة كل حاجة — وبتأكد إن الأفكار ذات صلة ثقافياً. أكتر طريقة نمو فعالة هي فهم الناس كأفراد مش جمهور ضخم.</p>
+      </div>
+    </div>
+    <div class="page-footer"><p class="footer-copy">© 2026 Youssuf Walid</p><p class="footer-brand">HALAL REELS<span>.</span></p></div>
+  </div>
+</div>
+
+<!-- ==================== WORK ==================== -->
+<div class="page" id="page-work">
+  <div class="page-inner">
+    <p class="section-label en">Selected Work</p>
+    <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">من شغلي</p>
+    <h2 class="section-title en">Clients & Projects</h2>
+    <h2 class="section-title ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">العملاء والمشاريع</h2>
+    <div class="clients-grid">
+      <div class="client-card"><div class="client-icon">🏠</div><div class="client-name">Hope Team</div><div class="client-sector">Real Estate · Social Media</div></div>
+      <a href="https://youtu.be/eAOQRiqMbDE?si=Z0o3uqe4zZkTMYFw" target="_blank" class="client-card" style="text-decoration:none;display:block">
+  <div class="client-icon">🎬</div>
+  <div class="client-name">Engy Naguib</div>
+  <div class="client-sector">Personal Brand · Content</div>
+  <div style="margin-top:.65rem;font-size:.72rem;color:#00C2FF;letter-spacing:.03em">Watch on YouTube ↗</div>
+</a>
+      <a href="https://www.instagram.com/p/DYQNasjNVds/" target="_blank" class="client-card" style="text-decoration:none;display:block">
+  <div class="client-icon">👤</div>
+  <div class="client-name">Saleh Abu El Magd</div>
+  <div class="client-sector">Personal Brand · Social Media</div>
+  <div style="margin-top:.65rem;font-size:.72rem;color:#00C2FF;letter-spacing:.03em">View Post ↗</div>
+</a>
+      <div class="client-card"><div class="client-icon">🔗</div><div class="client-name">ResynQ</div><div class="client-sector">Marketing Audit · 2026</div></div>
+      <a href="https://youtu.be/b6VUgrgjFss?si=iVjeWzEECSeC_S3J" target="_blank" class="client-card" style="text-decoration:none;display:block">
+  <div class="client-icon">🎙️</div>
+  <div class="client-name">Genz 1% Podcast</div>
+  <div class="client-sector">Original Production</div>
+  <div style="margin-top:.65rem;font-size:.72rem;color:#00C2FF;letter-spacing:.03em">Watch on YouTube ↗</div>
+</a>
+    </div>
+    <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.25rem;font-weight:700;margin:3rem 0 1.5rem;letter-spacing:-.02em" class="en">Content Highlights</h3>
+    <h3 style="font-family:Cairo,sans-serif;font-size:1.2rem;font-weight:700;margin:3rem 0 1.5rem;direction:rtl;display:none" class="ar">أبرز الكونتنت</h3>
+    <div class="content-grid">
+      <div class="content-card"><div class="content-thumb" style="background:#111"><div class="content-grd"></div><div class="content-arabic">بتلعب بيزنس من غير VAR؟ هتخسر الماتش!</div><div class="content-bar"></div></div><div class="content-meta"><div class="content-type en">Business Strategy</div><div class="content-type ar" style="font-family:Cairo,sans-serif;display:none">استراتيجية بيزنس</div><div class="content-sub">Reels · Arabic</div></div></div>
+      <div class="content-card"><div class="content-thumb" style="background:#0f0f0f"><div class="content-grd"></div><div class="content-arabic">الـ UGC لوحده بقى commodity... ليه القيمة قلّت؟</div><div class="content-bar"></div></div><div class="content-meta"><div class="content-type en">Market Analysis</div><div class="content-type ar" style="font-family:Cairo,sans-serif;display:none">تحليل سوق</div><div class="content-sub">Carousel · Arabic</div></div></div>
+      <div class="content-card"><div class="content-thumb" style="background:#111"><div class="content-grd"></div><div class="content-arabic">مفيش passive income قبل مليون دولار</div><div class="content-bar"></div></div><div class="content-meta"><div class="content-type en">Finance Reality</div><div class="content-type ar" style="font-family:Cairo,sans-serif;display:none">واقع مالي</div><div class="content-sub">Reels · Arabic</div></div></div>
+    </div>
+    <div class="os-banner" style="margin-top:2.5rem"><div class="os-icon">⚡</div><div><div class="os-title en">Currently Building: Content OS + Interest Media</div><div class="os-title ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">شغّال دلوقتي على: Content OS + Interest Media</div><p class="os-desc en">A scalable framework for producing consistent, high-quality content at speed using AI — turning expertise into media assets.</p><p class="os-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">فريمورك قابل للتوسع لإنتاج كونتنت ثابت وعالي الجودة بالـ AI — بيحوّل الخبرة لأصول ميديا.</p></div></div>
+    <div class="page-footer"><p class="footer-copy">© 2026 Youssuf Walid</p><p class="footer-brand">HALAL REELS<span>.</span></p></div>
+  </div>
+</div>
+
+
+<!-- ==================== COACHING ==================== -->
+<div class="page" id="page-coaching">
+  <div class="page-inner">
+
+    <!-- HERO BANNER -->
+    <div style="background:linear-gradient(135deg,rgba(0,194,255,.1),rgba(0,102,255,.05));border:1px solid rgba(0,194,255,.2);border-radius:20px;padding:3rem 2.5rem;margin-bottom:3rem;position:relative;overflow:hidden">
+      <div style="position:absolute;top:-50px;right:-50px;width:250px;height:250px;background:radial-gradient(circle,rgba(0,194,255,.12),transparent 70%);pointer-events:none"></div>
+      <p class="section-label en" style="margin-bottom:1rem">1-on-1 Coaching</p>
+      <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none;margin-bottom:1rem">كوتشنج فردي</p>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:1rem;max-width:600px" class="en">Stop Drowning in Information.<br/>Start Building.</h2>
+      <h2 style="font-family:Cairo,sans-serif;font-size:clamp(1.6rem,4vw,2.6rem);font-weight:700;line-height:1.3;margin-bottom:1rem;direction:rtl;display:none" class="ar">بطّل تغرق في المعلومات.<br/>ابدأ تبني.</h2>
+      <p style="color:var(--muted);font-size:1rem;line-height:1.9;max-width:560px" class="en">For freelancers and beginners who want to build a real presence online, make money from their skills, and finally get clarity — without wasting years figuring it out alone.</p>
+      <p style="color:var(--muted);font-size:1rem;line-height:2;max-width:560px;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">للفريلانسرز والمبتدئين اللي عايزين يبنوا حضور حقيقي أونلاين، يكسبوا من مهاراتهم، ويلاقوا الوضوح — من غير ما يضيعوا سنين يتقنوا لوحدهم.</p>
+      <div style="display:flex;gap:.85rem;flex-wrap:wrap;margin-top:1.75rem">
+        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary en" style="text-decoration:none;background:linear-gradient(90deg,#25D366,#128C7E)">💬 WhatsApp</a>
+        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary ar" style="font-family:Cairo,sans-serif;display:none;text-decoration:none;background:linear-gradient(90deg,#25D366,#128C7E)">💬 واتساب</a>
+        <button onclick="showPage('contact')" class="btn-secondary en">↗ Learn More</button>
+        <button onclick="showPage('contact')" class="btn-secondary ar" style="font-family:Cairo,sans-serif;display:none">↗ اعرف أكتر</button>
+      </div>
+    </div>
+
+    <!-- PROBLEMS I SOLVE -->
+    <p class="section-label en">Who This Is For</p>
+    <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">ده ليك لو</p>
+    <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:2rem" class="en">Recognize yourself here?</h3>
+    <h3 style="font-family:Cairo,sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:2rem;direction:rtl;display:none" class="ar">شايف نفسك هنا؟</h3>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:3rem" class="problems-grid">
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+        <div style="width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">😵</div>
+        <div>
+          <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem;color:var(--text)" class="en">Information Overload</p>
+          <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.875rem;margin-bottom:.35rem;color:var(--text);direction:rtl;display:none" class="ar">غرقان في المعلومات</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">Too many courses, books, YouTube videos — you don't know where to start or what actually matters.</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">كورسات كتير، كتب، يوتيوب — ومش عارف تبدأ منين أو إيه اللي بيفرق فعلاً.</p>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+        <div style="width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">💸</div>
+        <div>
+          <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem;color:var(--text)" class="en">Don't Know How to Make Money Online</p>
+          <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.875rem;margin-bottom:.35rem;color:var(--text);direction:rtl;display:none" class="ar">مش عارف تكسب أونلاين</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">You have skills but no idea how to turn them into actual income streams or clients.</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">عندك مهارات بس مش عارف تحولها لدخل حقيقي أو عملاء.</p>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+        <div style="width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">🧭</div>
+        <div>
+          <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem;color:var(--text)" class="en">No Social Media Presence</p>
+          <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.875rem;margin-bottom:.35rem;color:var(--text);direction:rtl;display:none" class="ar">معندكش حضور على السوشيال ميديا</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">You want to build your brand online but don't know what to post, how often, or how to grow.</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">عايز تبني براندك أونلاين بس مش عارف تبوست إيه، إمتى، أو ازاي تكبر.</p>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+        <div style="width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">🎯</div>
+        <div>
+          <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem;color:var(--text)" class="en">Don't Know Which Skill to Learn</p>
+          <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.875rem;margin-bottom:.35rem;color:var(--text);direction:rtl;display:none" class="ar">مش عارف تتعلم إيه</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">Confused between graphic design, video editing, copywriting, marketing — what fits YOU?</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">محتار بين الجرافيك، الفيديو، الكوبيرايتنج، الماركتنج — إيه اللي يناسبك انت؟</p>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+        <div style="width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">❓</div>
+        <div>
+          <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem;color:var(--text)" class="en">Passion vs. Monetization Confusion</p>
+          <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.875rem;margin-bottom:.35rem;color:var(--text);direction:rtl;display:none" class="ar">شغفك مقابل الكسب منه</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">You love something but don't know if you can actually make money from it — or how to start.</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">بتحب حاجة بس مش عارف تكسب منها — أو من فين تبدأ أصلاً.</p>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+        <div style="width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">📚</div>
+        <div>
+          <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem;color:var(--text)" class="en">Wrong Resources, Wasted Time</p>
+          <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.875rem;margin-bottom:.35rem;color:var(--text);direction:rtl;display:none" class="ar">مصادر غلط وتضييع وقت</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">You don't know which courses, books, or resources are actually worth your time and money.</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">مش عارف أنهي كورسات أو كتب أو مصادر فعلاً تستاهل وقتك وفلوسك.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WHAT YOU GET -->
+    <p class="section-label en">The Solution</p>
+    <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">الحل</p>
+    <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:2rem" class="en">What You Get in the Coaching</h3>
+    <h3 style="font-family:Cairo,sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:2rem;direction:rtl;display:none" class="ar">إيه اللي هتاخده في الكوتشنج</h3>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:3rem" class="coaching-delivers-grid">
+
+      <div style="background:linear-gradient(135deg,rgba(0,194,255,.08),rgba(0,102,255,.04));border:1px solid rgba(0,194,255,.2);border-radius:14px;padding:1.5rem;text-align:center">
+        <div style="font-size:2rem;margin-bottom:.75rem">🗺️</div>
+        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;color:var(--text)" class="en">Your Personal Roadmap</p>
+        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">خريطة طريقك الشخصية</p>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.7" class="en">A clear step-by-step plan built around your skills, passion, and goals — not a generic template.</p>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">خطة واضحة خطوة بخطوة مبنية على مهاراتك وشغفك وأهدافك — مش تمبليت جنيريك.</p>
+      </div>
+
+      <div style="background:linear-gradient(135deg,rgba(0,194,255,.08),rgba(0,102,255,.04));border:1px solid rgba(0,194,255,.2);border-radius:14px;padding:1.5rem;text-align:center">
+        <div style="font-size:2rem;margin-bottom:.75rem">💡</div>
+        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;color:var(--text)" class="en">Skill Discovery Session</p>
+        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">جلسة اكتشاف المهارة</p>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.7" class="en">We find the right skill for you based on your strengths, market demand, and income potential.</p>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">بنلاقي المهارة الصح بناءً على نقاط قوتك، الطلب في السوق، وإمكانية الدخل.</p>
+      </div>
+
+      <div style="background:linear-gradient(135deg,rgba(0,194,255,.08),rgba(0,102,255,.04));border:1px solid rgba(0,194,255,.2);border-radius:14px;padding:1.5rem;text-align:center">
+        <div style="font-size:2rem;margin-bottom:.75rem">📱</div>
+        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;color:var(--text)" class="en">Social Media Strategy</p>
+        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">استراتيجية سوشيال ميديا</p>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.7" class="en">Exactly what to post, how often, which platform — built for your niche and audience.</p>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">بالظبط تبوست إيه، إمتى، على أنهي بلاتفورم — مبني على نيشك وجمهورك.</p>
+      </div>
+
+      <div style="background:linear-gradient(135deg,rgba(0,194,255,.08),rgba(0,102,255,.04));border:1px solid rgba(0,194,255,.2);border-radius:14px;padding:1.5rem;text-align:center">
+        <div style="font-size:2rem;margin-bottom:.75rem">💰</div>
+        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;color:var(--text)" class="en">Monetization Plan</p>
+        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">خطة تحقيق الدخل</p>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.7" class="en">How to turn your skill into real income — freelancing, content, services, or digital products.</p>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">ازاي تحول مهارتك لدخل حقيقي — فريلانس، كونتنت، خدمات، أو منتجات رقمية.</p>
+      </div>
+
+      <div style="background:linear-gradient(135deg,rgba(0,194,255,.08),rgba(0,102,255,.04));border:1px solid rgba(0,194,255,.2);border-radius:14px;padding:1.5rem;text-align:center">
+        <div style="font-size:2rem;margin-bottom:.75rem">📖</div>
+        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;color:var(--text)" class="en">Curated Resources Only</p>
+        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">مصادر مختارة بس</p>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.7" class="en">The exact books, courses, and tools you need — no noise, no overwhelm, no wasted money.</p>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">الكتب والكورسات والأدوات اللي محتاجها بالظبط — من غير ضوضاء أو تضييع فلوس.</p>
+      </div>
+
+      <div style="background:linear-gradient(135deg,rgba(0,194,255,.08),rgba(0,102,255,.04));border:1px solid rgba(0,194,255,.2);border-radius:14px;padding:1.5rem;text-align:center">
+        <div style="font-size:2rem;margin-bottom:.75rem">🔥</div>
+        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;color:var(--text)" class="en">Accountability & Follow-up</p>
+        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">متابعة ومحاسبة</p>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.7" class="en">You won't be left alone after the session — I follow up to make sure you're actually moving.</p>
+        <p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">مش هتتسيب بعد الجلسة — بتابعك عشان تتأكد إنك فعلاً بتتحرك.</p>
+      </div>
+
+    </div>
+
+    <!-- CTA BANNER -->
+    <div style="background:linear-gradient(135deg,#001A3D,#0A1628);border:1px solid rgba(0,194,255,.3);border-radius:20px;padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(0,194,255,.1),transparent 60%);pointer-events:none"></div>
+      <p style="font-size:.75rem;letter-spacing:.15em;color:#00C2FF;text-transform:uppercase;font-weight:500;margin-bottom:.85rem" class="en">LIMITED SPOTS</p>
+      <p style="font-size:.75rem;letter-spacing:.15em;color:#00C2FF;text-transform:uppercase;font-weight:500;margin-bottom:.85rem;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">أماكن محدودة</p>
+      <h3 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;margin-bottom:.85rem;position:relative" class="en">Ready to Get Clarity?</h3>
+      <h3 style="font-family:Cairo,sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:700;margin-bottom:.85rem;position:relative;direction:rtl;display:none" class="ar">جاهز تاخد وضوح؟</h3>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:2rem;position:relative;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.8" class="en">One session can save you 2 years of trial and error. Let's find your path together.</p>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:2rem;position:relative;max-width:480px;margin-left:auto;margin-right:auto;line-height:2;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">جلسة واحدة ممكن توفرلك سنتين من التجربة والخطأ. خلينا نلاقي طريقك مع بعض.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary en" style="font-size:1rem;padding:.85rem 2.5rem;text-decoration:none;background:linear-gradient(90deg,#25D366,#128C7E)">💬 WhatsApp Now</a>
+        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary ar" style="font-family:Cairo,sans-serif;display:none;font-size:1rem;padding:.85rem 2.5rem;text-decoration:none;background:linear-gradient(90deg,#25D366,#128C7E)">💬 واتساب دلوقتي</a>
+        <button onclick="showPage('contact')" class="btn-secondary en" style="font-size:1rem;padding:.85rem 2.5rem">↗ Book a Session</button>
+        <button onclick="showPage('contact')" class="btn-secondary ar" style="font-family:Cairo,sans-serif;display:none;font-size:1rem;padding:.85rem 2.5rem">↗ احجز جلسة</button>
+      </div>
+    </div>
+
+    <div class="page-footer"><p class="footer-copy">© 2026 Youssuf Walid</p><p class="footer-brand">HALAL REELS<span>.</span></p></div>
+  </div>
+</div>
+
+<style>
+@media(max-width:900px){
+  .problems-grid{grid-template-columns:1fr!important}
+  .coaching-delivers-grid{grid-template-columns:repeat(2,1fr)!important}
+}
+@media(max-width:640px){
+  .problems-grid{grid-template-columns:1fr!important}
+  .coaching-delivers-grid{grid-template-columns:1fr!important}
+}
+</style>
+
+<!-- ==================== CONTACT ==================== -->
+<div class="page" id="page-contact">
+  <div class="page-inner" style="display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 57px)">
+    <div class="contact-inner" style="max-width:700px">
+      <p class="section-label en" style="justify-content:center">Get In Touch</p>
+      <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none;justify-content:center">تواصل معايا</p>
+      <h2 class="section-title en">Let's Build Something.</h2>
+      <h2 class="section-title ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">خلينا نبني حاجة.</h2>
+      <p class="contact-sub en">Open to new clients, collabs, speaking & teaching opportunities.</p>
+      <p class="contact-sub ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">مفتوح لعملاء جدد، كولابز، محاضرات، وفرص تعليمية.</p>
+
+      <!-- CONTACT FORM -->
+      <form action="https://formspree.io/f/xpwzkkbg" method="POST"
+        style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;margin:2rem 0;text-align:left"
+        onsubmit="handleForm(event)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
+          <div>
+            <label class="en" style="font-size:.75rem;color:var(--muted);display:block;margin-bottom:.4rem;letter-spacing:.05em">YOUR NAME</label>
+            <label class="ar" style="font-size:.75rem;color:var(--muted);display:none;margin-bottom:.4rem;letter-spacing:.05em;font-family:Cairo,sans-serif;direction:rtl">الاسم</label>
+            <input type="text" name="name" required placeholder="John Doe"
+              style="width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:.7rem 1rem;color:var(--text);font-size:.875rem;font-family:Inter,sans-serif;outline:none;transition:border-color .3s"
+              onfocus="this.style.borderColor='rgba(0,194,255,.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.07)'"/>
+          </div>
+          <div>
+            <label class="en" style="font-size:.75rem;color:var(--muted);display:block;margin-bottom:.4rem;letter-spacing:.05em">EMAIL</label>
+            <label class="ar" style="font-size:.75rem;color:var(--muted);display:none;margin-bottom:.4rem;letter-spacing:.05em;font-family:Cairo,sans-serif;direction:rtl">الإيميل</label>
+            <input type="email" name="email" required placeholder="you@email.com"
+              style="width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:.7rem 1rem;color:var(--text);font-size:.875rem;font-family:Inter,sans-serif;outline:none;transition:border-color .3s"
+              onfocus="this.style.borderColor='rgba(0,194,255,.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.07)'"/>
+          </div>
+        </div>
+        <div style="margin-bottom:1rem">
+          <label class="en" style="font-size:.75rem;color:var(--muted);display:block;margin-bottom:.4rem;letter-spacing:.05em">WHAT DO YOU NEED?</label>
+          <label class="ar" style="font-size:.75rem;color:var(--muted);display:none;margin-bottom:.4rem;letter-spacing:.05em;font-family:Cairo,sans-serif;direction:rtl">محتاج إيه؟</label>
+          <select name="service"
+            style="width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:.7rem 1rem;color:var(--text);font-size:.875rem;font-family:Inter,sans-serif;outline:none;transition:border-color .3s;cursor:pointer"
+            onfocus="this.style.borderColor='rgba(0,194,255,.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.07)'">
+            <option value="" style="background:#1C1C1C">Select a service...</option>
+            <option value="social-media" style="background:#1C1C1C">Social Media Management</option>
+            <option value="coaching" style="background:#1C1C1C">1-on-1 Coaching</option>
+            <option value="creative" style="background:#1C1C1C">Creative Direction</option>
+            <option value="ai-automation" style="background:#1C1C1C">AI & Automation</option>
+            <option value="audit" style="background:#1C1C1C">Marketing Audit</option>
+            <option value="other" style="background:#1C1C1C">Other</option>
+          </select>
+        </div>
+        <div style="margin-bottom:1.5rem">
+          <label class="en" style="font-size:.75rem;color:var(--muted);display:block;margin-bottom:.4rem;letter-spacing:.05em">MESSAGE</label>
+          <label class="ar" style="font-size:.75rem;color:var(--muted);display:none;margin-bottom:.4rem;letter-spacing:.05em;font-family:Cairo,sans-serif;direction:rtl">الرسالة</label>
+          <textarea name="message" required rows="4" placeholder="Tell me about your project..."
+            style="width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:.7rem 1rem;color:var(--text);font-size:.875rem;font-family:Inter,sans-serif;outline:none;resize:vertical;transition:border-color .3s;line-height:1.6"
+            onfocus="this.style.borderColor='rgba(0,194,255,.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.07)'"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:.95rem;padding:.8rem">
+          ↗ Send Message
+        </button>
+        <div id="form-success" style="display:none;margin-top:1rem;padding:.85rem;background:rgba(0,194,255,.1);border:1px solid rgba(0,194,255,.3);border-radius:8px;color:#00C2FF;font-size:.875rem;text-align:center">
+          ✅ Message sent! I'll get back to you soon.
+        </div>
+      </form>
+
+      <!-- SOCIAL LINKS -->
+      <div class="contact-grid">
+        <a href="https://wa.me/201022996822" class="contact-link" target="_blank" style="border-color:rgba(37,211,102,.3)">💬 WhatsApp</a>
+        <a href="https://instagram.com/youssufwalid" class="contact-link" target="_blank">📷 @youssufwalid</a>
+        <a href="https://www.linkedin.com/in/youssuf-waled-a04109220/" class="contact-link" target="_blank">💼 LinkedIn</a>
+        <a href="https://linktr.ee/jo_challenge_" class="contact-link" target="_blank">🔗 Linktree</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// AVATAR
+const AVATAR = "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";
+
+// PAGE SYSTEM
+let currentPage = 'home';
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  // scroll to top of new page
+  document.getElementById('page-'+id).scrollTop = 0;
+  currentPage = id;
+  // update nav active states
+  document.querySelectorAll('[data-page]').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === id);
+  });
+  // update mobile menu
+  document.querySelectorAll('.mobile-menu a').forEach((a,i) => {
+    const pages = ['home','about','services','pillars','work','coaching','contact'];
+    a.classList.toggle('active', pages[i] === id);
+  });
+}
+
+// TYPING EFFECT
+const fullName = "YOUSSUF WALID";
+let i = 0;
+const el = document.getElementById('typed-name');
+function type(){
+  if(i < fullName.length){ el.textContent += fullName[i]; i++; setTimeout(type, 80+Math.random()*50); }
+}
+setTimeout(type, 350);
+
+// LANG
+let currentLang = 'en';
+function setLang(lang){
+  currentLang = lang;
+  document.querySelectorAll('.en').forEach(el => { el.style.display = (lang==='en') ? '' : 'none'; });
+  document.querySelectorAll('.ar').forEach(el => {
+    if(lang==='ar'){
+      const t = el.tagName.toLowerCase();
+      el.style.display = ['button','a'].includes(t) ? 'inline-flex' : 'block';
+    } else { el.style.display = 'none'; }
+  });
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  document.getElementById('btn-ar').classList.toggle('active', lang==='ar');
+  document.documentElement.setAttribute('dir', lang==='ar' ? 'rtl' : 'ltr');
+}
+
+// HAMBURGER
+function toggleMenu(){
+  const m = document.getElementById('mobile-menu');
+  const h = document.getElementById('hamburger');
+  m.classList.toggle('open');
+  h.classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
+
+function handleForm(e){
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  fetch(form.action,{
+    method:'POST',
+    body:new FormData(form),
+    headers:{Accept:'application/json'}
+  }).then(r=>{
+    if(r.ok){
+      document.getElementById('form-success').style.display='block';
+      form.reset();
+      btn.textContent='✅ Sent!';
+    } else {
+      btn.textContent='Try again';
+      btn.disabled=false;
+    }
+  }).catch(()=>{
+    btn.textContent='Try again';
+    btn.disabled=false;
+  });
+}
+</script>
+</body>
+</html>
